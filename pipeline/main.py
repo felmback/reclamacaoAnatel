@@ -2,8 +2,6 @@ import os
 import aiohttp
 import asyncio
 import nest_asyncio
-# import duckdb
-# from pathlib import Path
 
 from download import download_file
 from extract_zip import extract_csv_from_zip
@@ -27,7 +25,7 @@ async def main():
         await download_file(url, zip_file)
         print("Download completo.")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"Erro ao baixar: {e}")
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
