@@ -20,9 +20,9 @@ def etl_reclamacoes(nm_file):
             Condição        AS CONDICAO,
             TipoAtendimento AS TIPO_ATENDIMENTO,
             Serviço         AS SERVICO,
-            UPPER(Marca)   AS OPERADORAS,
-            Assunto        AS ASSUNTO,
-            Problema       AS PROBLEMA
+            UPPER(Marca)    AS OPERADORAS,
+            Assunto         AS ASSUNTO,
+            Problema        AS PROBLEMA
         FROM (SELECT * FROM main.read_csv('{nm_file}'))
         WHERE (
             Ano >= 2022 
