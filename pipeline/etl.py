@@ -32,6 +32,7 @@ def etl_reclamacoes(nm_file):
     """
     try:
         dados = duckdb.sql(query).df()
+        
     except ValueError as e:
         print(f'Erro ao ler o arquivo: {e}')
     return dados
